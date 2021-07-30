@@ -1,0 +1,25 @@
+---
+galaxy_info:
+  author: ableton
+  company: Ableton AG
+  description: Determines path elements for system package managers
+  license: MIT
+  min_ansible_version: 2.10
+  role_name: pkg_mgr_path
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: macOS
+      versions:
+        - all
+    - name: Windows
+      versions:
+        - 8.1
+        - 10
+
+dependencies: []

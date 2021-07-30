@@ -1,0 +1,14 @@
+---
+- name: Set ansible_pkg_mgr_bin fact for Apple Silicon
+  set_fact:
+    ansible_pkg_mgr_bin: "/opt/homebrew/bin"
+  when: ansible_architecture == "arm64"
+
+- name: Set ansible_pkg_mgr_bin fact for Intel macOS
+  set_fact:
+    ansible_pkg_mgr_bin: "/usr/local/bin"
+  when: ansible_architecture == "x86_64"
+
+- name: Set ansible_pkg_mgr_path fact
+  set_fact:
+    ansible_pkg_mgr_path: "{{ ansible_pkg_mgr_bin }}:{{ ansible_env.PATH }}"

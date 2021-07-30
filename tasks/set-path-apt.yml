@@ -1,0 +1,8 @@
+---
+- name: Set ansible_pkg_mgr_bin fact
+  set_fact:
+    ansible_pkg_mgr_bin: "/usr/bin"
+
+- name: Set ansible_pkg_mgr_path fact
+  set_fact:
+    ansible_pkg_mgr_path: "{{ ansible_env.PATH }}"

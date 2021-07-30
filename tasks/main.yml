@@ -1,0 +1,9 @@
+---
+- name: Assert that ansible_pkg_mgr is defined
+  assert:
+    that:
+      - ansible_pkg_mgr is defined
+      - ansible_pkg_mgr != ""
+    quiet: true
+
+- include_tasks: "set-path-{{ ansible_pkg_mgr }}.yml"
