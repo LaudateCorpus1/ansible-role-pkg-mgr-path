@@ -33,6 +33,8 @@ variables for you:
   `/opt/whatever/bin`).
 - `ansible_pkg_mgr_path`: The full system path with the package manager's binary folder
   first (for example, `/opt/whatever/bin:/usr/bin:/bin:/usr/sbin:/sbin`).
+- `ansible_pkg_mgr_prefix`: The prefix to the package manager's installation folder (for
+ example, `/opt/whatever`).
 
 **IMPORTANT**: While this role has no required variables, it _does_ require that the
 `ansible_pkg_mgr` variable has been set. This is usually set when gathering facts for a

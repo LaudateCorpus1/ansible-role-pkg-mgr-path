@@ -1,7 +1,11 @@
 ---
+- name: Set ansible_pkg_mgr_prefix fact
+  set_fact:
+    ansible_pkg_mgr_prefix: "/opt/local"
+
 - name: Set ansible_pkg_mgr_bin fact
   set_fact:
-    ansible_pkg_mgr_bin: "/opt/local/bin"
+    ansible_pkg_mgr_bin: "{{ ansible_pkg_mgr_prefix }}/bin"
 
 - name: Set ansible_pkg_mgr_path fact
   set_fact:
