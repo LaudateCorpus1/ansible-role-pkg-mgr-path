@@ -1,4 +1,8 @@
 ---
+- name: Set ansible_pkg_mgr_prefix fact
+  set_fact:
+    ansible_pkg_mgr_prefix: "C:\\ProgramData\\chocolatey"
+
 - name: Set ansible_pkg_mgr_bin fact
   set_fact:
     ansible_pkg_mgr_bin: "C:\\ProgramData\\chocolatey"
