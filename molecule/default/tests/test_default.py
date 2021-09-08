@@ -1,3 +1,5 @@
+"""Molecule tests for the default scenario."""
+
 import os
 
 import testinfra.utils.ansible_runner
@@ -9,6 +11,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_paths_file(host):
+    """Test that variables were set correctly."""
     test_paths_file = host.file("/tmp/paths.txt")
     expected_paths = [
         "/usr/bin",  # ansible_pkg_mgr_bin
